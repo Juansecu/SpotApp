@@ -1,10 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+import { HomeComponent } from './artists/pages/home/home.component';
+
+import { ArtistComponent } from './artists/components/artist/artist.component';
+import { SearcherComponent } from './artists/components/searcher/searcher.component';
+
+const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'search', component: SearcherComponent },
+  { path: 'artist/:id', component: ArtistComponent },
+  { path: '**', pathMatch: 'full', redirectTo: '' },
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

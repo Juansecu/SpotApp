@@ -1,0 +1,14 @@
+<div class="col">
+  <div (click)="displayArtist(album)" *ngFor="let album of albums" class="card">
+    <img [src]="album.images | noImage" class="card-img-top" [alt]="album.name">
+    <div class="card-body">
+      <h4 class="card-title">{{ album.name }}</h4>
+      <div *ngFor="let name of album.artists ">
+        <p class="card-text">{{ name.name }}</p>
+      </div>
+      <p class="card-text">
+        <small class="text-muted">{{ album.release_date }}</small>
+      </p>
+    </div>
+  </div>
+</div>
