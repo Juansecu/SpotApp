@@ -1,7 +1,5 @@
 <app-loading *ngIf="loading"></app-loading>
 <div class="container">
   <app-error *ngIf="error" [errorContent]="errorMessage"></app-error>
-  <div class="card-columns">
-    <app-cards [albums]="newSongs"></app-cards>
-  </div>
+  <app-cards [albums]="newSongs"></app-cards>
 </div>

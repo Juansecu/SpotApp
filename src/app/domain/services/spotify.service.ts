@@ -32,9 +32,9 @@ export class SpotifyService {
   getQuery(query: string): Observable<object> {
     const url = `${this.baseUrl}/${query}`;
     const headers = new HttpHeaders({
-      Authorization:
-        'Bearer BQDws7StQn71O3wCs5K8DF6153G4uYAKqEYGl4rLTpDorAHsUm6uAj0O2-NkQwCB6Fviz82f2ECpGaWxI-A',
-    });
+			Authorization:
+				'Bearer BQC6wgUCcIZX_BCNQXseRBk0M2LnT0UDCofdHtVJ6Ik3Yzush09zlstAPtONjEM4JxD4RSF1vFtc_wdIZtY',
+		});
 
     return this.http.get(url, { headers });
   }
