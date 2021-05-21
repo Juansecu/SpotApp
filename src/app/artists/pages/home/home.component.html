@@ -1,5 +1,6 @@
-<app-loading *ngIf="loading"></app-loading>
-<div class="container">
+<app-loading *ngIf="loading" class="mt-5"></app-loading>
+
+<div class="container mt-5">
   <app-error *ngIf="error" [errorContent]="errorMessage"></app-error>
   <app-cards [albums]="newSongs"></app-cards>
 </div>
